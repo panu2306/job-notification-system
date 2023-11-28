@@ -1,70 +1,61 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.align-button {
-  margin-top: 10px;
-  margin-left: 10px;
-}
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
 .centered {
-  height: 50vh;
+  background-image: url('images/home.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent overlay */
 }
 
-.centered-add-job {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.custom-card {
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form-label {
-  text-align: left !important;
+.custom-card h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.card {
-  width: 80% !important;
+.custom-card .card-body {
+  padding: 20px;
 }
 
-.card-title {
-  font-size: medium !important;
-  margin-bottom: 20px !important;
+.custom-card .card-title {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
+
+.custom-card .card-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #666;
+}
+
+.custom-card .btn-primary {
+  background-color: #007bff;
+  border: none;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 18px;
+}
+
+.custom-card .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.custom-card .text-muted {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #999;
+}
+
