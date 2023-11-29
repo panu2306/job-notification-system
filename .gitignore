@@ -128,3 +128,14 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# java springboot
+.idea
+.gradle
+.m2
+target
+logs
+.iml
+.project
+.settings
+.classpath
