@@ -48,22 +48,46 @@ public class SubscriberServiceImpl implements SubsriberService {
 
         //File file = new File("opt/jobs.txt");
         File file = new File("/home/pranav/jobs.txt");
+        // try {
+        //     if (!file.exists()) {
+        //         file.createNewFile();
+        //     }
+
+        //     //Files.write(Paths.get("opt/jobs.txt"),
+        //     Files.write(Paths.get("/home/pranav/jobs.txt"),
+        //             (publishedJobs.getJobId() + "," +
+        //                     publishedJobs.getJobTitle() + "," +
+        //                     publishedJobs.getJobLocation() + "," +
+        //                     publishedJobs.getDescription() + "," +
+        //                     publishedJobs.getCompanyName() +
+        //                     System.lineSeparator()).getBytes(),
+        //                     StandardOpenOption.CREATE,
+        //                     StandardOpenOption.APPEND);
+        // } catch (IOException e) {
+        //     throw new RuntimeException(e);
+        // }
         try {
             if (!file.exists()) {
-                file.createNewFile();
+                boolean fileCreated = file.createNewFile();
+                if (!fileCreated) {
+                    System.err.println("File creation failed");
+                }
             }
-
-            //Files.write(Paths.get("opt/jobs.txt"),
-            Files.write(Paths.get("/home/pranav/jobs.txt"),
-                    (publishedJobs.getJobId() + "," +
-                            publishedJobs.getJobTitle() + "," +
-                            publishedJobs.getJobLocation() + "," +
-                            publishedJobs.getDescription() + "," +
-                            publishedJobs.getCompanyName() +
-                            System.lineSeparator()).getBytes(),
-                            StandardOpenOption.CREATE,
-                            StandardOpenOption.APPEND);
+        
+            String line = String.join(",",
+                    String.valueOf(publishedJobs.getJobId()),
+                    publishedJobs.getJobTitle(),
+                    publishedJobs.getJobLocation(),
+                    publishedJobs.getDescription(),
+                    publishedJobs.getCompanyName());
+        
+            line += System.lineSeparator();
+        
+            Files.write(Paths.get("/home/pranav/jobs.txt"), line.getBytes(),
+                    StandardOpenOption.CREATE, StandardOpenOption.APPEND);
         } catch (IOException e) {
+            System.err.println("Error writing to file: " + e.getMessage());
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
 

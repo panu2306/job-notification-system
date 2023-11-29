@@ -92,6 +92,7 @@ public class SubscriberController {
             String line;
             while ((line = br.readLine()) != null) {
                 // 45,Software engineer,CA,This is job desc for 45,Apple
+                // 198,Network Engineer,San Jose,New Grad,vmware
                 String[] jobDetails = line.split(",");
                 PublishedJobs publishedJob = new PublishedJobs();
                 publishedJob.setJobId(Integer.parseInt(jobDetails[0]));

@@ -23,7 +23,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 28px;
   margin-bottom: 20px;
-  color: #333;
+  color: white;
 }
 
 .custom-card .card-body {
@@ -59,3 +59,62 @@
   color: #999;
 }
 
+.custom-card {
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: #333;
+}
+
+.custom-card h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white; /* Heading color */
+}
+
+.custom-card .card-body {
+  padding: 20px;
+}
+
+.custom-card .btn-success {
+  background-color: #28a745; /* Green color for the Register button */
+  border: none;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 18px;
+  color: #fff; /* Button text color */
+}
+
+.custom-card .btn-success:hover {
+  background-color: #218838; /* Darker green color on hover */
+}
+
+.custom-card .text-muted {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #777; /* Footer text color */
+}
+
+/* Form input styles */
+.custom-card input[type="text"],
+.custom-card input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Adjust the alert style */
+.custom-card .alert {
+  margin-bottom: 20px;
+}
+
+/* Center the alert close button */
+.custom-card .alert .d-flex.justify-content-end {
+  justify-content: center;
+}
