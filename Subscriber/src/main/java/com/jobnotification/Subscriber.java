@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class Subscriber {
     public static void main(String[] args) {
         SpringApplication.run(Subscriber.class, args);
-        System.out.println("hello");
+        System.out.println("Hello from Subscriber!");
     }
 
     @Bean

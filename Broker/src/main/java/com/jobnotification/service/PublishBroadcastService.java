@@ -19,8 +19,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class PublishBroadcastService implements Callable<HttpStatus> {
 
-    //static final String DOCKER_VOLUME = "opt/";
-    static final String DOCKER_VOLUME = "/home/pranav/";
+    static final String DOCKER_VOLUME = "opt/";
+    //static final String DOCKER_VOLUME = "/home/pranav/";
     static final String PUBLISHER_SUBSCRIBER_MAP = DOCKER_VOLUME + "pubsubmapping.txt";
     static final String NO_ACK_LIST = DOCKER_VOLUME + "NoAck.txt";
     SpanningTree spanningTree;

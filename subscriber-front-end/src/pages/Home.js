@@ -4,7 +4,7 @@ import { Button, Card } from 'react-bootstrap';
 import './Home.css'; // Import your CSS file for styling
 
 const Home = () => {
-  const brokerURL = 'http://localhost:8082';
+  const brokerURL = 'http://ec2-54-175-11-5.compute-1.amazonaws.com:8083';
   const history = useNavigate();
 
   const handleClick = async (e) => {

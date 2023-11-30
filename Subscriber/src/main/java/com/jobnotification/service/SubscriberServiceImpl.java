@@ -21,12 +21,12 @@ public class SubscriberServiceImpl implements SubsriberService {
 
     @Override
     public HttpStatus subscribe(SubscriberModel subsriberModel) {
-        System.out.println("=======Subscriber details at broker====");
-        System.out.println("Subs id "+ subsriberModel.getSubscriberId());
-        System.out.println("Subs port "+ subsriberModel.getPort());
+        System.out.println("***** Details of Subscriber *****");
+        System.out.println("Subscriber ID: "+ subsriberModel.getSubscriberId());
+        System.out.println("Subscriber Port: "+ subsriberModel.getPort());
         System.out.println(subsriberModel.getCompanyNames().toString());
         //String url = "http://ec2-54-196-152-211.compute-1.amazonaws.com:8081/subscribe";
-        String url = "http://localhost:8081/subscribe";
+        String url = "http://ec2-54-234-72-176.compute-1.amazonaws.com:8081/subscribe";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<SubscriberModel> req = new HttpEntity<>(subsriberModel, headers);
@@ -38,56 +38,32 @@ public class SubscriberServiceImpl implements SubsriberService {
 
     @Override
     public HttpStatus notify(PublishedJobs publishedJobs) {
-        System.out.println("=============================================");
-        System.out.println("Company : " + publishedJobs.getCompanyName());
+        System.out.println("******************************************************");
+        System.out.println("Company Name : " + publishedJobs.getCompanyName());
         System.out.println("Job Id : " + publishedJobs.getJobId());
-        System.out.println("Title : " + publishedJobs.getJobTitle());
-        System.out.println("Location : " + publishedJobs.getJobLocation());
-        System.out.println("Description : " + publishedJobs.getDescription());
-        System.out.println("=============================================");
+        System.out.println("Job Title : " + publishedJobs.getJobTitle());
+        System.out.println("Job Location : " + publishedJobs.getJobLocation());
+        System.out.println("Job Description : " + publishedJobs.getDescription());
+        System.out.println("*******************************************************");
 
-        //File file = new File("opt/jobs.txt");
-        File file = new File("/home/pranav/jobs.txt");
-        // try {
-        //     if (!file.exists()) {
-        //         file.createNewFile();
-        //     }
-
-        //     //Files.write(Paths.get("opt/jobs.txt"),
-        //     Files.write(Paths.get("/home/pranav/jobs.txt"),
-        //             (publishedJobs.getJobId() + "," +
-        //                     publishedJobs.getJobTitle() + "," +
-        //                     publishedJobs.getJobLocation() + "," +
-        //                     publishedJobs.getDescription() + "," +
-        //                     publishedJobs.getCompanyName() +
-        //                     System.lineSeparator()).getBytes(),
-        //                     StandardOpenOption.CREATE,
-        //                     StandardOpenOption.APPEND);
-        // } catch (IOException e) {
-        //     throw new RuntimeException(e);
-        // }
+        File file = new File("opt/jobs.txt");
+        //File file = new File("/home/pranav/jobs.txt");
         try {
             if (!file.exists()) {
-                boolean fileCreated = file.createNewFile();
-                if (!fileCreated) {
-                    System.err.println("File creation failed");
-                }
+                file.createNewFile();
             }
-        
-            String line = String.join(",",
-                    String.valueOf(publishedJobs.getJobId()),
-                    publishedJobs.getJobTitle(),
-                    publishedJobs.getJobLocation(),
-                    publishedJobs.getDescription(),
-                    publishedJobs.getCompanyName());
-        
-            line += System.lineSeparator();
-        
-            Files.write(Paths.get("/home/pranav/jobs.txt"), line.getBytes(),
-                    StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+
+            Files.write(Paths.get("opt/jobs.txt"),
+            //Files.write(Paths.get("/home/pranav/jobs.txt"),
+                    (publishedJobs.getJobId() + "," +
+                            publishedJobs.getJobTitle() + "," +
+                            publishedJobs.getJobLocation() + "," +
+                            publishedJobs.getDescription() + "," +
+                            publishedJobs.getCompanyName() +
+                            System.lineSeparator()).getBytes(),
+                    StandardOpenOption.CREATE,
+                    StandardOpenOption.APPEND);
         } catch (IOException e) {
-            System.err.println("Error writing to file: " + e.getMessage());
-            e.printStackTrace();
             throw new RuntimeException(e);
         }
 

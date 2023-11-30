@@ -27,12 +27,12 @@ public class SubscriberController {
         StringBuilder response = new StringBuilder();
         try {
             //URL url = new URL("http://ec2-54-196-152-211.compute-1.amazonaws.com:8081/get/topics");
-            URL url = new URL("http://localhost:8081/get/topics");
+            URL url = new URL("http://ec2-54-234-72-176.compute-1.amazonaws.com:8081/get/topics");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
             int responseCode = connection.getResponseCode();
-            System.out.println("Response code: " + responseCode);
+            System.out.println("Response Code: " + responseCode);
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String line;
@@ -40,7 +40,7 @@ public class SubscriberController {
                 response.append(line);
             }
             reader.close();
-            System.out.println("Response body: " + response.toString());
+            System.out.println("Response Body: " + response.toString());
             connection.disconnect();
         } catch (Exception e) {
             e.printStackTrace();
@@ -74,13 +74,13 @@ public class SubscriberController {
     @GetMapping(value = "/jobs")
     public List<PublishedJobs> getAllJobs() {
         List<PublishedJobs> publishedJobsList = new ArrayList<>();
-        //String fileName = "opt/jobs.txt";
-        String fileName = "/home/pranav/jobs.txt";
+        String fileName = "opt/jobs.txt";
+        //String fileName = "/home/pranav/jobs.txt";
 
         try {
             File file = new File(fileName);
             if (!file.exists()) {
-                System.out.println("No jobs posted yet");
+                System.out.println("No Job Postings Yet");
                 return new ArrayList<>();
             }
         } catch (Exception ex) {

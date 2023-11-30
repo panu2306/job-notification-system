@@ -1,5 +1,0 @@
-Distribution of work:
-1. Low-level design and high-level design - All
-1. Publisher and Subscriber backend in Java - Prachi Mahesh Mokashi - W1652374
-2. Broker backend in Java - Ann Maria Cyriac - W1632292
-3. Publisher and Subscriber frontend in ReactJS, dockerization and publishing on dockerhub - Ruchi Manikrao Dhore - W1652116

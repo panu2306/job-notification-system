@@ -28,7 +28,7 @@ public class PublisherServiceImpl implements PublisherService {
 
             try {
                 //String url = "http://ec2-54-196-152-211.compute-1.amazonaws.com:8081/add/publisher";
-                String url = "http://localhost:8081/add/publisher";
+                String url = "http://ec2-54-234-72-176.compute-1.amazonaws.com:8081/add/publisher";
                 HttpHeaders headers = new HttpHeaders();
                 headers.setContentType(MediaType.APPLICATION_JSON);
                 HttpEntity<String> req = new HttpEntity<>(companyName, headers);
@@ -68,7 +68,7 @@ public class PublisherServiceImpl implements PublisherService {
 
             try {
                 //String url = "http://ec2-54-196-152-211.compute-1.amazonaws.com:8081/publish/jobs";
-                String url = "http://localhost:8081/publish/jobs";
+                String url = "http://ec2-54-234-72-176.compute-1.amazonaws.com:8081/publish/jobs";
                 HttpHeaders headers = new HttpHeaders();
                 headers.setContentType(MediaType.APPLICATION_JSON);
                 HttpEntity<PublishedJobs> requestEntity = new HttpEntity<>(publishedJobs, headers);

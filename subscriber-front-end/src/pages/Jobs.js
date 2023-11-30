@@ -4,7 +4,7 @@ import axios from 'axios';
 import './Jobs.css'; // Import your CSS file for styling
 
 const Jobs = () => {
-  const subURL = "http://localhost:8082/";
+  const subURL = "http://ec2-54-175-11-5.compute-1.amazonaws.com:8083";
   const [jobs, setJobs] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
 

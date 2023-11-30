@@ -9,8 +9,8 @@ import java.util.List;
 
 public interface BrokerService {
 
-    //static final String DOCKER_VOLUME = "opt/";
-    static final String DOCKER_VOLUME = "/home/pranav/";
+    static final String DOCKER_VOLUME = "opt/";
+    //static final String DOCKER_VOLUME = "/home/pranav/";
     static final String SUBSCRIBER_LIST = DOCKER_VOLUME + "subscriberlist.txt";
     static final String PUBLISHER_SUBSCRIBER_MAP = DOCKER_VOLUME + "pubsubmapping.txt";
 
