@@ -36,6 +36,6 @@ Commands used:
 
 ```
 docker build -t sub-react-app .
-docker tag sub-react-app ruchidhore/subscriber-frontend:latest
-docker push ruchidhore/subscriber-frontend
+docker tag sub-react-app pranav2306/subscriber-frontend:1.0
+docker push pranav2306/subscriber-frontend
 ```
