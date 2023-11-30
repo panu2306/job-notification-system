@@ -26,8 +26,8 @@ The utilization of Public DNS URLs enables seamless communication between contai
 Commands used:
 ```
 $ docker build -t broker-java-app .
-$ docker tag broker-java-app ruchidhore/broker:latest
-$ docker push ruchidhore/broker
+$ docker tag broker-java-app pranav2306/broker:1.0
+$ docker push pranav2306/broker
 ```
 
 
