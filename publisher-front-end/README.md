@@ -1,13 +1,13 @@
 # Publisher Frontend
 
-This React application is the frontend client for the backend Publisher Java application. It consists of REST API endpoints and pages for the communication to the Publisher Java application.
+This React application serves as the front-end interface for the Publisher Java backend application. It utilizes REST API endpoints and dedicated pages to facilitate communication with the Publisher Java application.
 
 ## Creation, Dependency management, build and deployment
 
 ### Creating the react app
 
 ```
-npm create-react-app publisher-app
+$ npm create-react-app publisher-app
 ```
 
 ### Dependency management
@@ -17,25 +17,26 @@ To manage third-party dependencies, npm install was used.
 For example:
 
 ```
-npm install axios
+$ npm install axios
 ```
 
 ### Run the application
 
 ```
-npm start
+$ npm start
 ```
 
 ### Deployment
 
-To quickly deploy and scale applications Docker has been used. The required settings has been provided in the Dockerfile. To fasten the process of pulling the docker images, the docker images have been published Docker Hub Container Image Library (https://hub.docker.com/)
+To expedite application deployment and scaling, Docker has been employed. The necessary configurations are detailed in the Dockerfile. To accelerate the process of pulling Docker images, they have been published to Docker Hub's Container Image Library (https://hub.docker.com/)
 
-This docker image is pulled on an AWS EC2 instance and run as a docker container. To communicate between two containers across different AWS EC2 instances, Public DNS URLs are used.
+The Docker image is pulled onto an AWS EC2 instance and executed as a Docker container. For inter-container communication across multiple AWS EC2 instances, Public DNS URLs are utilized.
 
-Commands used:
+
+## Commands used:
 
 ```
-docker build -t pub-react-app .
-docker tag pub-react-app ruchidhore/publisher-frontend:latest
-docker push ruchidhore/publisher-frontend
+$ docker build -t pub-react-app .
+$ docker tag pub-react-app pranav2306/publisher-frontend:latest
+$ docker push pranav2306/publisher-frontend
 ```

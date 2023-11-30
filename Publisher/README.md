@@ -1,31 +1,23 @@
-# Publisher Backend
+# Publisher Backend: A Java Application Serving as the Backbone of the Publisher React Frontend
 
-This Java application is the backend server for the frontend Publisher React application. It consists of REST API endpoints for the communication between frontend React application and broker Java application.
+This Java application serves as the backend server for the Publisher React frontend application, enabling seamless communication between the two. It comprises REST API endpoints that facilitate data exchange between the frontend and the broker Java application.
 
-## Dependency management, build and deployment
+## Managing Dependencies, Building, and Deployment Dependency Management
+For efficient third-party dependency management, Gradle has been integrated into the application. All project dependencies are neatly defined within the build.gradle file.
 
-### Dependency management
-To manage third-party dependencies, Gradle has been integrated with this application. All the dependencies for this project are added as part of the file build.gradle
-
-Commands used:
+## Relevant Commands:
 ```
-gradle clean build
-gradle --refresh-dependencies
+$ gradle clean build
+$ gradle --refresh-dependencies
 ```
+## Deployment
+Leveraging Docker for rapid application deployment and scaling, the necessary configurations are provided in the Dockerfile. To expedite the process of pulling Docker images, they have been published to the Docker Hub Container Image Library (https://hub.docker.com/).
 
-### Building the project
-To JAR has been created which is stored at the build folder using the option Build > Build Project in IntelliJ
+The Docker image is pulled onto an AWS EC2 instance and executed as a Docker container. Public DNS URLs facilitate communication between containers residing on different AWS EC2 instances.
 
-### Deployment
-To quickly deploy and scale applications Docker has been used. The required settings has been provided in the Dockerfile. To fasten the process of pulling the docker images, the docker images have been published Docker Hub Container Image Library (https://hub.docker.com/)
-
-This docker image is pulled on an AWS EC2 instance and run as a docker container. To communicate between two containers across different AWS EC2 instances, Public DNS URLs are used.
-
-Commands used:
+## Relevant Commands:
 ```
-docker build -t pub-java-app .
-docker tag pub-java-app ruchidhore/publisher-backend:latest
-docker push ruchidhore/publisher-backend
+$ docker build -t pub-java-app .
+$ docker tag pub-java-app pranav2306/publisher-backend:1.0
+$ docker push pranav2306/publisher-backend:1.0
 ```
-
-
