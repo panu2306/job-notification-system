@@ -24,8 +24,8 @@ This docker image is pulled on an AWS EC2 instance and run as a docker container
 Commands used:
 ```
 docker build -t sub-java-app .
-docker tag sub-java-app ruchidhore/subscriber-backend:latest
-docker push ruchidhore/subscriber-backend
+docker tag sub-java-app pranav2306/subscriber-backend:latest
+docker push pranav2306/subscriber-backend
 ```
 
 

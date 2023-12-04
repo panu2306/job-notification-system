@@ -36,6 +36,6 @@ Commands used:
 
 ```
 docker build -t pub-react-app .
-docker tag pub-react-app ruchidhore/publisher-frontend:latest
-docker push ruchidhore/publisher-frontend
+docker tag pub-react-app pranav2306/publisher-frontend:latest
+docker push pranav2306/publisher-frontend
 ```
