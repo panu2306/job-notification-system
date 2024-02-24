@@ -1,5 +1,11 @@
-# job-notification-system - Streamlining Job Search with Real-Time Notifications
-Revolutionizing the way job seekers connect with employers, Job Notification System leverages a cutting-edge publisher-subscriber model for efficient and personalized job notifications.
+# Job Notification System - Streamlining Job Search with Real-Time Notifications
+The project provides a revolutionizing way for job seekers to connect with employers, Job Notification System leverages a cutting-edge publisher-subscriber model for efficient and personalized job notifications.
+
+## Technology Stack Used:
+- Java (Spring Boot)
+- React (Frontend)
+- Docker
+- AWS EC2, VPC, S3
 
 ## Key Features:
 - Direct Communication: Job seekers subscribe to their preferred companies, receiving instant alerts for relevant job openings. Companies reach targeted candidates, maximizing hiring efficiency.
