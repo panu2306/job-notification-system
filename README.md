@@ -9,6 +9,21 @@ Revolutionizing the way job seekers connect with employers, Job Notification Sys
 - Algorithmic Efficiency: Advanced algorithms ensure timely and reliable notification delivery, even with high user traffic.
 
 ## Architecture: 
+![Job Notification System - Architectural Diagram](https://github.com/panu2306/job-notification-system/blob/main/images/job_notification_system-architecture.png?raw=true)
+
+## Project Demo Screenshots: 
+#### Publisher Frontend - 
+![Publisher Front-End](https://github.com/panu2306/job-notification-system/blob/main/images/publisher_frontend.png?raw=true)
+#### Registering a Company - 
+![Company Registration](https://github.com/panu2306/job-notification-system/blob/main/images/company_registration.png?raw=true)
+#### Publisher 1 Posting a Job - 
+![Publisher-1 Posting a Job](https://github.com/panu2306/job-notification-system/blob/main/images/publisher1_posting_job.png?raw=true)
+#### Publisher 2 Posting a Job - 
+![Publisher-2 Posting a Job](https://github.com/panu2306/job-notification-system/blob/main/images/publisher2_posting_job.png?raw=true)
+#### Subscriber Home Page - 
+![Subscriber Home Page](https://github.com/panu2306/job-notification-system/blob/main/images/subscriber_home_page.png?raw=true)
+#### Subscriber's Subscription List - 
+![Subscribers Subscription List](https://github.com/panu2306/job-notification-system/blob/main/images/subscriber_subscriptions_list.png?raw=true)
 
 ## Future Vision:
 - Enhanced Stability: Implementing leader election and broker clustering will further strengthen network stability and data redundancy.
